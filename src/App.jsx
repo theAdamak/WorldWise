@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 const BASE_URL = "http://localhost:9000";
 
 function App() {
-  const [cities, setCities] = useState({});
+  const [cities, setCities] = useState([]);
   const [isLoding, setIsLoding] = useState(false);
 
   useEffect(function () {
@@ -24,6 +24,8 @@ function App() {
         setIsLoding(false);
       } catch {
         alert("error loading data..");
+      } finally {
+        setIsLoding(false);
       }
     }
     fetchCities();
