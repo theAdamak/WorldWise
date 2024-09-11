@@ -9,8 +9,7 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city }) {
-  console.log(cities);
-  const { cityName, emoji, date } = cities;
+  const { cityName, emoji } = city;
 
   return (
     <li className={styles.cityItem}>

@@ -3,8 +3,11 @@ import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
 import Message from "./Message";
 
-function CityList(cities, isLoading) {
+// eslint-disable-next-line react/prop-types
+function CityList({ cities, isLoading }) {
+  console.log(cities);
   if (isLoading) return <Spinner />;
+  // eslint-disable-next-line react/prop-types
   if (!cities.length)
     return (
       <Message message="Add your first city by clicking on a city on the map" />
