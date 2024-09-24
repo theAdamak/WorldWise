@@ -5,7 +5,6 @@ import Message from "./Message";
 
 // eslint-disable-next-line react/prop-types
 function CityList({ cities, isLoading }) {
-  console.log(cities);
   if (isLoading) return <Spinner />;
   // eslint-disable-next-line react/prop-types
   if (!cities.length)
@@ -16,7 +15,7 @@ function CityList({ cities, isLoading }) {
   return (
     <ul className={styles.cityList}>
       {cities.map((city) => (
-        <CityItem cities={city} key={city.id} />
+        <CityItem city={city} key={city.id} />
       ))}
     </ul>
   );
